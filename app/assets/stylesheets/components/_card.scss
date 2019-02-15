@@ -4,7 +4,6 @@
   background-position: center;
   margin-bottom: 20px;
   height: 250px;
-  width: 300px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -16,18 +15,20 @@
   position: relative;
 }
 
-.cocktails {
+
+#bidule {
   display: flex;
-  position: relative;
+  justify-content: space-between
 }
 
-#create {
-  position: absolute;
-  left: 20px;
-}
+// #create {
+//   position: absolute;
+//   left: 20px;
+// }
 
-#cocktail-list {
-  position: absolute;
-  right: 20px;
+// #cocktail-list {
+//   position: absolute;
+//   right: 20px;
+// }
 
-}
+
