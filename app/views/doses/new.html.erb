@@ -3,7 +3,7 @@
   <h1>Create a dose for the <%= @cocktail.name %></h1>
   <%= simple_form_for [@cocktail, @dose] do |f| %>
     <%= f.input :description, label: 'What is the dose ?', placeholder: '5 cl de vodka'  %>
-    <%= f.association :ingredient, label: 'What is the ingredient ?', placeholder: 'vodka' %>
+    <%= f.association :ingredient, label: 'What is the ingredient ?', placeholder: 'vodka', collection: Ingredient.all, input_html: { class: 'select2' } %>
     <%= f.submit "Create a dose for the cocktail", class: "btn btn-success" %>
   <% end %>
 

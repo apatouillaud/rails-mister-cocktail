@@ -1,12 +1,10 @@
+
 .card {
-  display: flex;
-}
-
-.card-category {
   background-size: cover;
   background-position: center;
   margin-bottom: 20px;
-  height: 180px;
+  height: 250px;
+  width: 300px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -18,28 +16,18 @@
   position: relative;
 }
 
-.card-description {
-  background-size: cover;
-  background-position: center;
-  margin-bottom: 20px;
-  height: 100px;
+.cocktails {
   display: flex;
-  justify-content: center;
-  align-items: center;
-  color: white;
-  font-size: 24px;
-  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
-  border-radius: 5px;
-  box-shadow: 0 0 15px rgba(0,0,0,0.2);
   position: relative;
 }
 
-#description {
+#create {
   position: absolute;
-  left: 5px;
+  left: 20px;
 }
 
-#delete {
+#cocktail-list {
   position: absolute;
-  right: 5px;
+  right: 20px;
+
 }

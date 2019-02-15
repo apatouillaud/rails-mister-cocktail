@@ -5,26 +5,17 @@
   <div class="row">
     <div class="col-md-6 col-md-offset-3">
       <h1>Recipe of <%= @cocktail.name  %></h1>
-      <div>
-        <%= link_to 'Add an ingredient', new_cocktail_dose_path(@cocktail), class: "btn btn-success" %>
-      </div>
-      <br>
     </div>
 
     <div class="cards">
-      <% @cocktail.doses.each do |dose| %>
-        <div class="col-md-6 col-md-offset-3">
-          <div class="card-description">
-            <div id="description">
-              <%= dose.description %> <%= dose.ingredient.name %>
-            </div>
-            <div id="delete">
-              <%= link_to "Delete", dose_path(dose), method: :delete %>
-            </div>
+      <div class="row">
+        <% @cocktail.doses.each do |dose| %>
+          <div class="col-md-6 col-md-offset-3">
+            <%= dose.description %> <%= dose.ingredient.name %>
+            <%= link_to "Delete", dose_path(dose), method: :delete %>
           </div>
-        </div>
-      <% end %>
-      <br>
+        <% end %>
+      </div>
     </div>
 
     <div class="col-md-6 col-md-offset-3">
@@ -34,8 +25,22 @@
       </div>
     </div>
   </div>
+  <div>
+    <h5>Create a dose for the <%= @cocktail.name %></h5>
+  </div>
 
+  <div>
+    <%= simple_form_for [@cocktail, @dose] do |f| %>
+      <%= f.input :description, label: 'What is the dose ?', placeholder: '5 cl de vodka'  %>
+      <%= f.association :ingredient, label: 'What is the ingredient ?', placeholder: 'vodka', collection: Ingredient.all, input_html: { class: 'select2' } %>
+      <%= f.submit "Create a dose for the cocktail", class: "btn btn-success" %>
+    <% end %>
+  </div>
 </div>
+
+
+
+
 
 
 
