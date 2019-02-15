@@ -5,36 +5,51 @@
   <div class="row">
     <div class="col-md-6 col-md-offset-3">
       <h1>Recipe of <%= @cocktail.name  %></h1>
+      <div class="photo-cocktail">
+        <%= cl_image_tag @cocktail.photo, height: 300, width: 400, crop: :fill %>
+      </div>
     </div>
+  </div>
 
   <div class="row">
     <% @cocktail.doses.each do |dose| %>
-      <div class="col-md-12">
-        <%= dose.description %> <%= dose.ingredient.name %>
-        <%= link_to "Delete", dose_path(dose), method: :delete %>
+      <div class="col-md-12" #id="bidule-description">
+        <div class="card-dose">
+          <div><%= dose.description %> <%= dose.ingredient.name %></div>
+          <div><%= link_to "Delete", dose_path(dose), method: :delete %></div>
+        </div>
       </div>
     <% end %>
   </div>
 
-
-    <div class="col-md-6 col-md-offset-3">
-      <br>
+  <div class="row">
+    <div class="col-md-12">
       <div>
-      <%= link_to 'List of cocktails', cocktails_path, class: "btn btn-success" %>
+        <%= link_to 'List of cocktails', cocktails_path, class: "btn btn-success" %>
       </div>
     </div>
   </div>
-  <div>
-    <h5>Create a dose for the <%= @cocktail.name %></h5>
+
+  <div class="row">
+    <div class="col-md-12">
+      <div>
+        <h5>Create a dose for the <%= @cocktail.name %></h5>
+      </div>
+    </div>
   </div>
 
-  <div>
-    <%= simple_form_for [@cocktail, @dose] do |f| %>
-      <%= f.input :description, label: 'What is the dose ?', placeholder: '5 cl de vodka'  %>
-      <%= f.association :ingredient, label: 'What is the ingredient ?', placeholder: 'vodka', collection: Ingredient.all, input_html: { class: 'select2' } %>
-      <%= f.submit "Create a dose for the cocktail", class: "btn btn-success" %>
-    <% end %>
+  <div class="row">
+    <div class="col-md-12">
+      <div>
+        <%= simple_form_for [@cocktail, @dose] do |f| %>
+          <%= f.input :description, label: 'What is the dose ?', placeholder: '5 cl de vodka'  %>
+          <%= f.association :ingredient, label: 'What is the ingredient ?', placeholder: 'vodka', collection: Ingredient.all, input_html: { class: 'select2' } %>
+          <%= f.submit "Create a dose for the cocktail", class: "btn btn-success" %>
+        <% end %>
+      </div>
+    </div>
   </div>
+
 </div>
 
 

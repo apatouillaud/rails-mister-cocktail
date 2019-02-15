@@ -12,7 +12,20 @@
   text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
   border-radius: 5px;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
-  position: relative;
+}
+
+.card-dose {
+  margin-bottom: 20px;
+  height: 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: blue;
+  font-size: 15px;
+  border-radius: 5px;
+  box-shadow: 0 0 5px rgba(0,0,0,0.2);
+  background-color: white;
+  padding: 10px;
 }
 
 
@@ -21,14 +34,9 @@
   justify-content: space-between
 }
 
-// #create {
-//   position: absolute;
-//   left: 20px;
-// }
+.photo-cocktail {
+  margin-bottom: 20px;
+}
 
-// #cocktail-list {
-//   position: absolute;
-//   right: 20px;
-// }
 
 
