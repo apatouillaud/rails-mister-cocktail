@@ -11,6 +11,7 @@ require 'json'
 
 puts "cleaning database"
 
+Cocktail.destroy_all
 Ingredient.destroy_all
 
 puts "creating ingredients"

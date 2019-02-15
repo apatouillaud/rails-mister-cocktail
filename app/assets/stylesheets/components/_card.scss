@@ -1,0 +1,47 @@
+.card {
+  display: flex;
+}
+
+.card-category {
+  background-size: cover;
+  background-position: center;
+  margin-bottom: 20px;
+  height: 180px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-size: 24px;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+  border-radius: 5px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), asset-url('cocktail.png');
+  position: relative;
+}
+
+.card-description {
+  background-size: cover;
+  background-position: center;
+  margin-bottom: 20px;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-size: 24px;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+  border-radius: 5px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), asset-url('cocktail.png');
+  position: relative;
+}
+
+#description {
+  position: absolute;
+  left: 5px;
+}
+
+#delete {
+  position: absolute;
+  right: 5px;
+}
